@@ -1,0 +1,735 @@
+﻿╓─╥╖
+║─║║
+╟─╫╢
+╙─╨╜
+
+Notes:
+1. this is an unformatted rough draft. other than the ASCII art.
+2. Things in ">>>" and/or "<<<" are things that need to be filled in. probably URL's. or maybe they just need a certain style (like inline-code).
+3. You might see some things wrapped in * or / or _. those are potential formatting ideas.
+  -- *bold*, /italics/, _underline_.
+4. This is meant to be an offical quick-start beginner tutorial replacement.
+5. stuff prefixed with |--- is code.
+6. ???
+6. ???
+
+
+
+              (♪ Hoo ♪ You wanted an AutoHootkey hootorial? )
+              /
+       ,___, /
+       [O.o]
+       /)__)
+   ╓────"──"─────╢Index╟────────────╖
+   ║┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄║
+   ║ 0 - The basics                 ║
+   ║ ╼ a. Downloading AHK           ║
+   ║ ╼ b. How to create a script    ║
+   ║ ╼ c. You cannot merge commands ║
+   ║ ╼ d. Other basic info          ║
+   ║                                ║
+   ║ 1 - Hotkeys & Hotstrings       ║
+   ║ ╼ a. Keys and symbols          ║
+   ║ ╼ b. Window specific           ║
+   ║ ╼ c. Multiple hotkeys per file ║
+   ║ ╼ d. Examples                  ║
+   ║                                ║
+   ║ 2 - Sending key strokes        ║
+   ║ ╼ a. Games                     ║
+   ║                                ║
+   ║ 3 - Running programs & website ║
+   ║                                ║
+   ║ 4 - Commands vs. Functions()   ║
+   ║ ╼ a. Code blocks               ║
+   ║                                ║
+   ║ 5 - Variables                  ║
+   ║ ╼ a. When to use percents      ║
+   ║ ╼ b. Getting user input        ║
+   ║ ╼ c. Other Examples?           ║
+   ║                                ║
+   ║ 6 - Other helpful goodies      ║
+   ║ ╼ a. The mysterious []'s       ║
+   ║ ╼ b. Finding your AHK version  ║
+   ║ ╼ c. Trial and Error           ║
+   ║ ╼ d. Objects and arrays        ║
+   ║ ╼ e. Indentation               ║
+   ║ ╼ f. Other links               ║
+   ╙────────────────────────────────╜
+
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+0 - The basics.
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+a. Downloading and installing AutoHotkey
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+Before learning to use AutoHotkey (AHK), you will need to download it. After downloading it, you may possibly need install it. But that depends on the version you want. For this guide we will use the Installer since it is easiest  to set up.
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+Text instructions:
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+  1. Go to the AutoHotkey Homepage. http://www.autohotkey.com/
+  2. Click Download. http://www.autohotkey.com/download/
+  3. Here's where the confusion comes in. There are several versions to choose from: AutoHotkey_L or AutoHotkey_Basic. Since you are new, you should choose AutoHotkey_L.
+  4. During installation of AutoHotkey_L, you will be asked to choose from UNICODE or ANSI. In short, you would probably want to choose UNICODE. It has support for non-English letters and numbers (characters). Keep going until you see an Install button.
+  5. Once done, great! Continue on to section b.
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+Video instructions:
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+Frankie's "Install and Hello World" http://www.autohotkey.com/forum/viewtopic.php?t=77674
+
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+b. How to create a script
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+Once you have AutoHotkey installed, you will probably want it to do stuff. AutoHotkey is not magic, we all wish it was, but it is not. So we will need to tell it what to do. This process is called "Scripting".
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+Text instructions:
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+  1. Right-Click on your desktop.
+  2. Find "New" in the menu.
+  3. Click "AutoHotkey Script" inside the "New" menu.
+  4. Give the script a new name. Note: It must end with a .ahk extension. Ex. MyScript.ahk
+  5. Find the newly created file on your desktop and Right-Click it.
+  6. Click "Edit Script".
+  7. A window should have popped up, probably Notepad. If so, SUCCESS!
+
+So now that you have created a script, we need to add stuff into the file.
+For a list of all built-in commands, function and variables, see >>>section c<<<.
+
+Here is a very basic script containing a Hotkey which types text when pressed.
+|------------
+|--- ^j::
+|---    Send, My First Script
+|--- Return
+|------------
+We will get more in-depth later on. In short:
+The first line " ^j:: " is the Hotkey. ^ is CTRL, j is j. anything to the LEFT of :: is the hotkey.
+The Second line " Send, My First Script " is the text to SEND when you press the hotkey. SEND is the command, anything after the comma (,) will be typed.
+Finally, line 3. " Return ". Return will become your best friend. It literally STOPS code from going any further. From going to the lines below. This will prevent many issues when you start having a lot of stuff in your scripts.
+
+  8. Save the File.
+  9. Double-Click the file/icon in the desktop to run it. Open notepad or anything you can type in and press Ctrl and J.
+  10. Hip Hip Hooray! Your first script is done. Go get some reward snacks then return to reading the rest of this tutorial.
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+Video instructions:
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+Frankie's "Install and Hello World" http://www.autohotkey.com/forum/viewtopic.php?t=77674
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+c. You cannot merge commands
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+>>>Link to "* Commands"<<<
+
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+d. Other basic info
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+How to find the Help File on your computer:
+>>> <<<
+
+On the web:
+Links:
+>>> Documentation <<<
+>>> Command List <<<
+>>> Functions <<<
+>>> Variables <<<
+
+
+
+
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+1 - Hotkeys & Hotstrings
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+What is a Hotkey? A hotkey is a key that is hot to the touch. Hehe, just kidding. It is a key or key combination that the person at the keyboard presses to trigger some actions.
+What is a Hotstring? Hotstrings are mainly used to expand abbreviations as you type them (auto-replace), they can also be used to launch any scripted action.
+
+Here is a hotkey:
+|------------
+|--- ^j::
+|---    Send, My First Script
+|--- Return
+|------------
+
+Here is a hotstring:
+|------------
+|--- ::ftw::Free the whales
+|------------
+
+The difference between the two examples is that the hotkey will be triggered when you press CTRL & J while the hotstring will convert your typed "ftw" into "Free the whales".
+
+"So, how exactly does a person such as myself create a hotkey?"
+Good question. A hotkey is created by using a single pair of ::'s. The key or key combo needs to go on the *left* of the ::. And the content needs to go below, followed by a return.
+Note: There are exceptions, but those tend to cause confusion a lot of the time. So I'm not adding them to the tutorial, at least, not right now.
+|------------
+|--- esc::
+|---    MsgBox Escape!!!!
+|--- return
+|------------
+
+A hotstring has a pair of ::'s on each side of the text you want to trigger the text replacement. While the text to replace your typed text goes on the *right* of the second pair of ::'s.
+
+Hotstring, as mentioned above, can also launch scripted actions. Thats fancy talk for "do pretty much anything". Same with hotkeys.
+|------------
+|--- ::btw::
+|---    MsgBox You typed "btw".
+|--- return
+|------------
+
+A nice thing to know is that you can have many lines of code for each hotkey, hotstring, label, and a lot of other things we haven't talked about yet.
+|------------
+|--- ^j::
+|---    MsgBox Wow!
+|---    MsgBox this is
+|---    Run, Notepad.exe
+|---    winactivate, Untitled - Notepad
+|---    WinWaitActive, Untitled - Notepad
+|---    send, 7 lines{!}{enter}
+|---    sendinput, inside the ctrl{+}j hotkey
+|--- return
+|------------
+
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+a. Keys and the mysterious symbols
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+You might be wondering "How the *flubber* am I supposed to know that ^ means CTRL?!". Well, good question. to help you learn what ^ and other symbols mean, gaze upon this chart:
+>>> insert AHK's modifier chart here, possible do some tweaking. <<<
+
+Additionally, here is a list of all/most hotkey names that can be used on the *left* side of a hotkey's :: symbol:
+>>> insert Key list URL <<<
+
+You can define a custom combination of two (and only two) keys (except joystick buttons) by using " & " between them. In the below example, you would hold down Numpad0 then press the second key to trigger the hotkey:
+|------------
+|--- Numpad0 & Numpad1::MsgBox You pressed Numpad1 while holding down Numpad0. |
+|--- Numpad0 & Numpad2::Run Notepad                                            |
+|------------
+
+For additional hotkey modifiers, information and examples, please visit:
+>>> insert hotkey URL <<<
+
+But you are now wondering if hotstrings have any cool modifiers since hotkeys do. Yes, they do!
+Hotstrings modifiers go between the first set of ::'s. Such as:
+|------------
+|--- :*:ftw::Free the whales
+|------------
+
+For additional hotstring modifiers, information and examples, please visit:
+>>> insert hotstring URL <<<
+
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+b. Window specific hotkeys/hotstrings
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+Sometime you might want a hotkey or hotstring to only work (or be disabled) in a certain window. To do this, you will need to use either of these fancy commands with a # in-front of them.
+#IfWinActive
+#IfWinExist
+These special commands (technically called "directives") create context-sensitive hotkeys and hotstrings. Simply specify a windows title. But in some cased you might want to specify an HWND, group, or class. Those are a bit advanced and are covered more in-depth here >>> #IfWinActive page <<<.
+|------------
+|--- #IfWinActive Untitled - Notepad
+|--- #space::MsgBox You pressed Win+Spacebar in Notepad.
+|------------
+
+The #IfWin commands are positional: they affect all hotkeys and hotstrings physically beneath them in the script.
+|------------
+|--- ; Notepad
+|--- #IfWinActive ahk_class Notepad
+|--- #space::
+|---    MsgBox, You pressed Win+Spacebar in Notepad.
+|--- return
+|--- ::msg::You typed msg in Notepad
+|--- #IfWinActive
+|---
+|--- ; MSPaint
+|--- #IfWinActive untitled - Paint
+|--- #space::
+|---    MsgBox, You pressed Win+Spacebar in MSPaint!
+|--- return
+|--- ::msg::You typed msg in MSPaint!
+|--- #IfWinActive
+|------------
+
+To turn off context sensitivity, specify any #IfWin command but leave all of its parameters blank. For example:
+|------------
+|--- ; Notepad
+|--- #IfWinActive untitled - Notepad
+|---  !q::
+|---     MsgBox, You pressed Alt and Q in Notepad.
+|--- #IfWinActive
+|---
+|---  ; Any window that isn't Untitled - Notepad
+|---  !q::
+|---     MsgBox, You pressed Alt and Q in any window.
+|---  Return
+|------------
+When #IfWin commands are turned off (or never used in a script), all hotkeys and hotstrings are enabled for all windows.
+
+For more in-depth information and similar commands, please check out:
+>>> #IfWinActive page <<<.
+
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+c. Multiple hotkeys/hotstrings per file
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+This, for some reason, crosses some peoples minds. So I'll set it clear: AutoHotkey has the ability to have as many hotkeys and hotstrings in 1 file as you want. Whether it's 1, or 8253 (or more).
+|------------
+|--- #i::
+|---    run, http://www.google.com/
+|--- return
+|---
+|--- ^p::
+|---    run, notepad.exe
+|--- return
+|---
+|--- ~j::
+|---    send, ack
+|--- return
+|---
+|--- ::acheiv::achiev
+|--- ::achievment::achievement
+|--- ::acquaintence::acquaintance
+|--- :*:adquir::acquir
+|--- ::aquisition::acquisition
+|--- ::agravat::aggravat
+|--- :*:allign::align
+|--- ::ameria::America
+|------------
+
+The above code is perfectly acceptable. Multiple hotkeys, multple hotstrings. All in one big happy script file.
+
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+d. Examples
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+
+>>> insert samples here <<<
+
+
+
+
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+2 - Sending key strokes 
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+So now you decided that you want to send (type) keys to a program. We can do that. Use the >>>Send<<< command. Send literally sends keystrokes, to simulate typing or pressing of keys.
+
+Before we get into things, here are some common issues that people have:
+  Just like Hotkeys, Send has special keys too. Lots and lots of them.
+  >>> table explaining !, +, ^ and # <<<
+
+  With the Send commands, you are able to send more then 1 letter, number or symbol at a time aswell. So no need for a bunch of Send commands with 1 letter each.
+  
+  /The next couple of paragraphs are talking about this >>>table on send page<<</
+  Their is also a gigantic table for your convenience detailing most other special keys with actions, such as {enter} or {space}.
+  It's a common issue, lots of people assume that the curly brackets are put on the documentation page just for fun. But in fact *they are needed*. It's how AHK knows that {!} means "exclamation point" and *not* "press the alt key". So please remember to check the table on the >>>send<< page and make sure you have your brackets in the right places.
+
+  Another common issue is that people think that *everything* needs to be wrapped in brackets with the send command. That is FALSE. If it's not in the chart, it does not need brackets. You do not need to wrap common letters, or numbers and even some symbols (like . (period)) in {}'s.
+  
+  Lastly, this table *does not* apply to hotkeys. Meaning, you do not wrap CTRL or ENTER (or any other key) inside {}'s when makeing a >>>Hotkey section link<<<
+  
+Some examples explaining that jargon above:
+
+|---------------
+|--- ; The hotkey sample.
+|--- ; WRONG
+|--- {LCtrl}::
+|---   send, AutoHotkey
+|--- return
+|--- 
+|--- ; CORRECT
+|--- LCtrl::
+|---   send, AutoHotkey
+|--- return
+|---------------
+
+Some examples explaining that jargon above:
+|---------------
+|--- ; Notice the ! is in {}'s? Thats because if it wasn't, AHK would press the ALT key.
+|--- send, This text has been typed{!}
+|---------------
+
+|---------------
+|--- ; Same as above, but with the ENTER key. AHK would type out "enter" if it wasn't wrapped in {}'s.
+|--- send, Multiple enter lines have enter been sent. ; WRONG
+|--- send, Multiple{enter}lines have{enter}been sent. ; CORRECT
+|---------------
+
+|---------------
+|--- ; Don't wrap words or indivisual letters that are not in the table mentioned above.
+|--- send, {a}       ; WRONG
+|--- send, {b}       ; WRONG
+|--- send, {c}       ; WRONG
+|--- send, {a}{b}{c} ; WRONG
+|--- send, {abc}     ; WRONG
+|--- send, abc       ; CORRECT
+|---------------
+
+To hold down or release a key: Enclose in braces the name of the key followed by the word Down or Up.
+|---------------
+|--- ; This is how you hold 1 key down and press another key (or keys).
+|--- ; If 1 method doesn't work in your program, please try the other.
+|--- send, ^s                    ; Both of these send CTRL+s
+|--- send, {ctrl down}s{ctrl up} ; Both of these send CTRL+s
+|--- Send {b down}{b up}
+|--- Send {TAB down}{TAB up}
+|--- Send {Up down} ; Press down the up-arrow key.
+|--- Sleep 1000     ; Keep it down for one second.
+|--- Send {Up up}   ; Release the up-arrow key.
+|---------------
+
+
+But now you are wondering "How can I make my really long send commands readable?". Easy. Use what is known as a >>> Continuation Section <<<. Simply specify an opening parenthesis on a new, then your content and then a closing parenthesis on a new line. For more information, read about >>> Continuation Sections <<<.
+|---------------
+|--- send,
+|--- (
+|--- Line 1
+|--- Line 2
+|--- Apples are a fruit.
+|--- )
+|---------------
+
+Note: Their are several different forms of send. Each has there own special features. If one form of send does not work for your needs, try another type of send. Simply replace the commands name "send" with "sendPlay" or whatever you want. 
+Here are most ways to send text:
+Send
+SendRaw
+SendInput
+SendPlay
+SendEvent
+For more information on what each one does, >>> please read here <<<.
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+b. Games 
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+>>> this could probably be placed in a few sections. or sections could link to this. <<<
+
+This is important!
+A lot of games, especially modern ones, have cheat prevention software. Things like GameGuard, Hackshield, PunkBuster and several other types. If a game has a cheat prevention system and your hotkeys, hotstrings and send commands do not work, you are out of luck.
+Not only is bypassing these systems in violation of the games policies and will get you banned, they are complex to work around. Their are methods that can increase the chance of working in some games, but there is no magical "make it work in my game now!!!" button. so try *ALL* of these before giving up.
+>>> insert FAQ game solution list <<<
+
+Their are also known issues with DirectX. If you are having issues and you know the game uses DirectX, try the stuff above. You should also try running the game in Windowed Mode, if possible. That fixes some DirectX issues.
+More DirextX issues may occure when using pixel or image commands. Colors might turn out black (0x000000) no matter the color you try to get. That is another tricky thing to fix. Try running in Windowed Mode if you can.
+
+
+
+
+
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+3 - Running programs & websites
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+To run a program such as *Mspaint.exe*, *Calc.exe*, *script.ahk* or even a folder path, you can use the >>>Run<<< command. It can even be used to open URLs such as http://www.autohotkey.com/ . If your computer is setup to run the type of program you want to run, it's very simple:
+|---------------
+|--- ; Run a program. Note: most programs will require a FULL file path. 
+|--- Run, %A_ProgramFiles%\Some_Program\Program.exe
+|---
+|--- ; Run a website
+|--- Run, http://www.autohotkey.com
+|---------------
+
+Their are some other advanced features aswell, such as Command-Line parameters and CLSID. If you want to learn more about that stuff, check this page out:
+>>> run page <<<
+
+Here are a few more samples:
+|---------------
+|--- ; Several programs do not need a full path, such as Windows-standard programs.
+|--- Run, Notepad.exe
+|--- Run, MsPaint.exe
+|---
+|--- ; Run the "My Documents" folder using the built-in AHK variable
+|--- Run, %A_MyDocuments%
+|---
+|--- ; Run some websites
+|--- Run, http://www.autohotkey.com
+|--- Run, http://www.google.com
+|---------------
+
+For more in-depth information and examples, please check out:
+>>> run page <<<.
+
+
+
+
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+4 - Commands vs. Functions()
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+AutoHotkey has two main types of things used by the scripter to create code:
+Commands and Functions()
+
+* Commands
+You can tell what a command is by looking at its layout. Commands do not use parenthesis "()" around the parameters like functions do. So a command would look like this: >>>Command, parameter1, parameter2, parameter3.<<<
+This page contains a list of all Commands that come with AHK >>command list<<<
+
+When using commands, you cannot squish other commands onto the same line as a previous command (exception: >>>ifEqual<<<). You cannot put commands inside the parameters of other commands.
+|---------------
+|--- Msgbox, Hello Run, Notepad.exe   ; Wrong
+|--- Msgbox, Hello, Run, Notepad.exe  ; Wrong
+|--- 
+|--- Msgbox, Hello      ; Correct
+|--- Run, Notepad.exe   
+|---------------
+
+Commands also differ from function in that they use "traditional syntax". Meaning: when you use a %variable%, you NEED to use %'s around it and text does not need to be in "quotation marks". Additionally, you cannot do math in the parameters, unlike functions().
+
+* Functions
+As stated above, functions are different because they use parenthesis. A typical function looks like: >>>Function(parameter1, parameter2, parameter3)<<<.
+Functions have a few main differences.
+1) You can do math in them.
+ -- SubStr(37*12, 1, 2)
+ -- SubStr(A_Hour-12, 2)
+2) Variables do not need to be wrapped in percent signs.
+ -- SubStr(A_Now, 7, 2)
+3) Functions can go inside of functions.
+ -- SubStr(A_AHKPath, inStr(A_AHKPath, "AutoHotkey"))
+4) Text needs to be wrapped in quotes.
+ -- SubStr("I'm scripting, awesome!", 16)
+ 
+Commands usually return a value differently than a command does. Commands need an OutputVariable parameter, functions do not. The most common way to assign a variable to the value of a function is like so:
+>>>MyVariable:=Function(Parameters)<<<
+|---------------
+|--- MyVariable:=SubStr("I'm scripting, awesome!", 16)
+|---------------
+
+This isn't the only way, but it's the most common. You are assigning MyVariable to the value of the function (in this case, SubStr(...)) that follows.
+>>>More about Functions<<<
+
+In short:
+|---------------
+|--- ; These are commands
+|--- Msgbox, This is some text.
+|--- StringReplace, Output, Input, AutoHotKey, AutoHotkey, ALL
+|--- SendIput, This is awesome{!}{!}{!}
+|---
+|--- ; These are Functions
+|--- SubStr("I'm scripting, awesome!", 16)
+|--- FileExist(VariableContainingPath)
+|--- Output:=SubStr("I'm scripting, awesome!", 16)
+|---------------
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+a. Code blocks
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+Code blocks are little curly brackets ({ and }) that are there to group a section of code together, so that AutoHotkey knows it's one big family, it needs to stay together. They are most often used with If and Loops. Without them, only the first line in the block is called.
+
+In the following code, both lines are ran only if var equals 5.
+|---------------
+|--- if (var=5)
+|--- {
+|---    MsgBox, var equals %var%!!
+|---    Exitapp
+|--- }
+|---------------
+
+In the following code, the msgbox is only ran if var equals 5. The code will always exit, even if var=5.
+|---------------
+|--- if (var=5)
+|---    MsgBox, var equals %var%!!
+|---    Exitapp
+|---------------
+
+This is perfectly fine since the if only had 1 line of code associated with it.
+|---------------
+|--- if (var=5)
+|---    MsgBox, var equals %var%!!
+|--- MsgBox, We are now 'outside' the if. We did not need {}'s since there was only 1 line below it.
+|---------------
+
+
+
+
+
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+5 - Variables
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+Variables are like little post-it notes that hold some information. They can be used to store text, numbers, data from functions and commands or even mathematical equations. Without them, programming & scripting would be much more tedius.
+
+Variables can be assigned a few ways, I'll just cover the most common. Please pay attention to the equal sign (=).
+1) variable=text
+2) variable=%variable2%
+3) variable:="text"
+4) variable:=variable2
+5) variable:=6+8/3*2-sqrt(9)
+
+1. This is the simplest form for a variable, traditional assignment. Simply type in your text and done.
+2. Same as above, but you are assigning a variable to a different variable.
+The above two can be combined. var=%var2% some text %var3%.
+
+3. This is an expression assignment, due to the : before the =. any text needs to be in "quotes".
+4. In expression mode, variables do not need %'s.
+5. Thanks to expressions, you can do math!
+You can combine the above three: var:="The value of 5+5 is: " 5+VariableContainingNumber
+
+As a side note that this tutorial won't cover, any equal sign (=) with a symbol infront of it is always an expression. So := += -= .= etc. are all expressions. A single = is used for assignment (when outside an >>>if statement<<<).
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+Variables inside if (...)'s
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+Variables inside of if's act a little different. When using =, it acts as a comparison and not an assignment. You can use := or any other equal sign to assign. >>>if (var:=5.+5 = 10)<<< will assign the variable "Var" to the value of 5+5, and the if will still compare 5+5 to 10
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+a. When to use percents
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+One of the most common issues with AutoHotkey involving variables is when to use the percent signs (%). Hopefully this will clear some confusion.
+
+When to use %'s:
+1) When you are using Commands (see above), you use percent signs.
+ -- Except when the parameter is OutputVar or InputVar.
+2) When you are assigning a variable
+ 
+When not to use %'s:
+1) In parameters that are input or output variables, For example: StringLen, OutputVar, InputVar
+2) On the left side of an assignment: Var = 123abc
+3) On the left side of traditional (non-expression) if-statements: If Var1 < %Var2%
+4) Everywhere in expressions. For example:
+|---------------
+|--- If (Var1 <> Var2)
+|---    Var1 := Var2 + 100
+|---------------
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+b. Getting user input
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+Sometimes you want to have the user to choose the value of stuff. Their are several ways of doing this, but the simplest way is >>>Inputbox<<<.
+Here is a simple example on how to ask the user a question and do a simple check on the input.
+|---------------
+|--- InputBox, OutputVar, Question 1, What is your first name?
+|--- InputBox, OutputVar2, Question 2, Do you like AutoHotkey?
+|---
+|--- if (OutputVar="Bill")
+|---    MsgBox, That's is an awesome name, %OutputVar%.
+|---
+|--- if (OutputVar2="yes")
+|---    MsgBox, Thank you for answering %OutputVar2%`, %OutputVar%! We will become great friends.
+|--- else
+|---    MsgBox, %OutputVar%: That makes me sad.
+|---------------
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+c. other examples?
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+
+
+
+
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+6 - Other helpful goodies
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+We have reached the end, my good friend. I hope you have learned something.
+But before we go, here are some other things that I think you should know! Enjoy!
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+a. The mysterious []'s     
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+Throughout the documentation, you will see these two symbols ([ and ]) in the yellow syntax box at the top of almost all pages. Anything inside of these brackets are OPTIONAL. Meaning the stuff inside can be left out if you don't need them. When writing your code, it is very important to >>>NOT<<< type in the []'s.
+On the >>>ControlGetText<<< page you will see this:
+>>>ControlGetText, OutputVar [, Control, WinTitle, WinText, ExcludeTitle, ExcludeText]<<<
+So you could simple do this if you wanted:
+>>>ControlGetText, OutputVar<<<
+
+Or add in some more details:
+>>>ControlGetText, OutputVar, Control, WinTitle<<<
+
+But what if you wanted to ExludeTitle, but not fill in WinText or WinTitle? Simple!
+>>>ControlGetText, OutputVar, Control,,, ExcludeTitle<<<
+
+Please note that you cannot IGNORE parameters, you can however leave them blank. 
+This is invalid. If you were to Ignore "WinTitle, WinText", it would look like this and cause issues:
+>>>ControlGetText, OutputVar, Control, ExcludeTitle<<<
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+b. Finding your AHK version
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+Run this code to see your AHK version:
+|---------------
+|--- MsgBox, %A_AHKVersion%
+|---------------
+
+Or look for "AutoHotkey Help File" or "AutoHotkey.chm" in the start menu or your installation directory.
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+c. Trial and Error         
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+Trial and Error is a very common and effective way of learning. Instead of asking for help on every little thing, sometimes spending some time alone (sometimes hours or days) and trying to get something to work will help you learn faster.
+
+If you try something and it gives you an error, study that error. Then try and fix your code. Then try running it again. If you still get an error, modify your code some more. Keep trying and failing until your code fails no more. You will learn a lot this way by reading the documentation, reading errors and learning what works and what doesn't.
+Try, fail, try, fail, try, fail, try, try, try, fail, fail, succeed!
+
+This is how a lot of "pros" have learned. But don't be affraid to ask for help, we don't bite (hard).
+Learning takes time, the "pros" you encounter did not learn to be masters in just a few hours or days.
+
+"If at first you don't succeed, try, try, try again." - Hickson, William E.
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+d. Indentation             
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+This stuff is very important! Your code will run perfectly fine without it, but it will be a major headache for you and other to read your code. Small code (25 lines or less) will probably be fine to read without indentation, but it'll soon get sloppy. It's best you learn to indent ASAP.
+Indentation has no set style, but it's best to keep everything consistent.
+But what is indentation you ask? It's simply spacing to break up your code so you can see what belongs to what. People usually use 3 or 4 spaces or 1 tab per "level".
+No indents:
+|---------------
+|--- if (car="old")
+|--- {
+|--- msgbox, the car is really old
+|--- if (wheels="flat")
+|--- {
+|--- msgbox, this car is not safe to drive.
+|--- return
+|--- }
+|--- else
+|--- {
+|--- msgbox, Be careful! This old car will be dangerous to drive.
+|--- }
+|--- }
+|--- else
+|--- {
+|--- msgbox, My`, what a shiny new vehicle you have there.
+|--- }
+|---------------
+
+Indented:
+|---------------
+|--- if (car="old")
+|--- {
+|---    msgbox, the car is really old
+|---    if (wheels="flat")
+|---    {
+|---       msgbox, this car is not safe to drive.
+|---       return
+|---    }
+|---    else
+|---    {
+|---       msgbox, Be careful! This old car will be dangerous to drive.
+|---    }
+|--- }
+|--- else
+|--- {
+|---    msgbox, My`, what a shiny new vehicle you have there.
+|--- }
+|---------------
+
+Wiki has various styles and examples. Choose what you like or learn to indent how you think it's easiest to read.
+http://en.wikipedia.org/wiki/Indent_style
+
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+e. Other links 
+┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄
+>>> <<<
+
+
+
+
+
+
+
+
+
+
+
+

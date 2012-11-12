@@ -1,0 +1,157 @@
+
+#toc
+{
+   border:              black;
+   border-top-style:    solid;
+   border-bottom-style: solid;
+   border-left-style:   double;
+   border-right-style:  double;
+   border-top-width:    2px;
+   border-bottom-width: 2px;
+   border-left-width:   4px;
+   border-right-width:  4px;
+   width:               350px;
+}
+
+
+a.toci:hover,li.toci:hover,a.url:hover
+{
+   color: #EC9221;
+}
+
+p
+{
+   line-height: 1.35em;
+}
+
+ol, ul
+{
+   margin-top:    5px;
+   margin-bottom: 1em;
+}
+
+h1, h2, h3, p
+{
+   margin:  2px;
+   padding: 5px;
+   padding-right: 2px;
+}
+
+pre
+{
+   margin-top:    0.5em;
+   margin-bottom: 0.5em;
+}
+
+.page
+{
+   width:            950px;
+   margin-left:      auto;
+   margin-right:     auto;
+   background-color: #efefef;
+}
+
+body
+{
+   background-color: White;
+   color:            black;
+   font-size:        100%;
+   font-family:      Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
+}
+
+
+h1
+{
+   background-color: #68758f;
+   font-size:        22pt;
+   color:            white;
+   height:           32px;
+   margin-top:       2em;
+}
+
+
+h2
+{
+   background-color: #7d89a2;
+   font-size:        12pt;
+   color:            white;
+   margin-top:       1em;
+}
+
+/* same as h1 but no top margin. */
+h3
+{
+   background-color: #68758f;
+   font-size:        22px;
+   color:            white;
+   height:           32px;
+}
+
+h1:hover,h3:hover
+{
+   background-image:    url("owl.png");
+   background-position: top right;
+   background-repeat:   no-repeat;
+   background-color:    #68758f;
+   padding-right:       2px;
+}
+
+.InlineCode
+{
+   color:               #7F9F7F;
+   font-size:           80%
+   font-family:         "Andale Mono", "Courier New", Courier, monospace;
+   background-color:    #eaeaea;
+   padding-left:        3px;
+   padding-right:       3px;
+   border-top:          #c4c4c4;
+   border-top-style:    solid;
+   border-top-width:    1px;
+   border-bottom:       #c4c4c4;
+   border-bottom-style: solid;
+   border-bottom-width: 1px;
+}
+
+.MultiCode
+{
+   color:            #6a8a60;
+   font-family:      "Andale Mono", "Courier New", Courier, monospace;
+   background-color: #ffffdd;
+   padding-left:     3px;
+   padding-right:    3px;
+   border:           #cedf99;
+   border-style:     solid;
+   border-width:     1px;
+   overflow:         auto;
+   
+}
+
+.Style1
+{
+   background-color:  #CAFFD5;
+   padding-left:      6px;
+   padding-right:     3px;
+   border-left:       #33A64D;
+   border-left-style: solid;
+   border-left-width: 2px;
+   width:             500px;
+   margin-left:       1em;
+}
+
+
+.key
+{
+   font-size:        10pt;
+   min-width:        90px;
+   padding:          1px;
+   background-color: #F8F8FF;
+   border-top:       #ffffff;
+   border-bottom:    #778899;
+   border-left:      #F5F5F5;
+   border-right:     #778899;
+   border-style:     solid;
+   border-width:     3px;
+}
+
+
+
