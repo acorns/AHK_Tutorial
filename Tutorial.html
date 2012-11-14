@@ -12,8 +12,7 @@
 			<div id="toc">
 				<h3 style="text-align: center;">Table of Contents</h3>
 				<ol>
-					<li><a href="#s0" class="toci">The basics</a></li>
-					<li>
+					<li><a href="#s0" class="toci">The basics</a>
 						<ul>
 							<li><a href="#s01" class="toci">Downloading AutoHotkey</a></li>
 							<li><a href="#s02" class="toci">How to create a script</a></li>
@@ -22,8 +21,7 @@
 						</ul>
 					</li>
 
-					<li><a href="#s1" class="toci">Hotkeys & Hotstrings</a></li>
-					<li>
+					<li><a href="#s1" class="toci">Hotkeys & Hotstrings</a>
 						<ul>
 							<li><a href="#s11" class="toci">Keys and symbols</a></li>
 							<li><a href="#s12" class="toci">Window specific</a></li>
@@ -32,8 +30,7 @@
 						</ul>
 					</li>
 
-					<li><a href="#s2" class="toci">Sending key strokes</a></li>
-					<li>
+					<li><a href="#s2" class="toci">Sending key strokes</a>
 						<ul>
 							<li><a href="#s21" class="toci">Games</a></li>
 						</ul>
@@ -41,15 +38,13 @@
 
 					<li><a href="#s3" class="toci">Running programs & website</a></li>
 
-					<li><a href="#s4" class="toci">Commands vs. Functions()</a></li>
-					<li>
+					<li><a href="#s4" class="toci">Commands vs. Functions()</a>
 						<ul>
 							<li><a href="#s41" class="toci">Code blocks</a></li>
 						</ul>
 					</li>
 
-					<li><a href="#s5" class="toci">Variables</a></li>
-					<li>
+					<li><a href="#s5" class="toci">Variables</a>
 						<ul>
 							<li><a href="#s51" class="toci">When to use percents</a>
 							<li><a href="#s52" class="toci">Getting user input</a></li>
@@ -57,8 +52,7 @@
 						</ul>
 					</li>
 
-					<li><a href="#s6" class="toci">Other helpful goodies</a></li>
-					<li>
+					<li><a href="#s6" class="toci">Other helpful goodies</a>
 						<ul>
 							<li><a href="#s61" class="toci">The mysterious []'s</a></li>
 							<li><a href="#s62" class="toci">Finding your AHK version</a></li>
@@ -136,41 +130,39 @@
 					<li>4. Give the script a new name. Note: It must end with a .ahk extension. Ex. MyScript.ahk</li>
 					<li>5. Find the newly created file on your desktop and Right-Click it.</li>
 					<li>6. Click "Edit Script".</li>
-					<li>7. A window should have popped up, probably Notepad. If so, SUCCESS!</li>
-				</ul>
-				<hr />
-				<p>
-					So now that you have created a script, we need to add 
-					stuff into the file. For a list of all built-in 
-					commands, function and variables, 
-					see <a href="#4" class="url">section 5</a>.<br />
-				</p>
-				<p>
-					Here is a very basic script containing a Hotkey which types text using the <a href="http://www.autohotkey.com/docs/commands/Send.htm" class="url">Send</a> command when the hotkey is pressed.
-				</p>
+					<li>7. A window should have popped up, probably Notepad. If so, SUCCESS!
+					<hr />
+					<p>
+						So now that you have created a script, we need to add 
+						stuff into the file. For a list of all built-in 
+						commands, function and variables, 
+						see <a href="#4" class="url">section 5</a>.<br />
+					</p>
+					<p>
+						Here is a very basic script containing a Hotkey which types text using the <a href="http://www.autohotkey.com/docs/commands/Send.htm" class="url">Send</a> command when the hotkey is pressed.
+					</p>
 
 <pre class="MultiCode">
 ^j::
    Send, My First Script
 Return
 </pre>
-				<p>
-					We will get more in-depth later on. Until then, here's an
-					explanation of the above code.<br />
-      
-					- The first line. <span class="InlineCode">^j::</span> is 
-					the Hotkey. <span class="InlineCode">^</span> means 
-					<span class="key">CTRL</span>, 
-					<span class="InlineCode">j</span> is the letter 
-					<span class="key">j</span>. anything to the <b>left</b> of
-					<span class="InlineCode">::</span> are the keys you need to press.<br />
-      
-					- The second line. <span class="InlineCode">Send, My First Script</span> is how you SEND keystrokes. <span class="InlineCode">SEND</span> is the command, anything after the comma (,) will be typed.<br />
-      
-					- The third line. <span class="InlineCode">Return</span>. Return will become your best friend. It literally STOPS code from going any further, to the lines below. This will prevent many issues when you start having a lot of stuff in your scripts.
-				</p>
-				<hr />
-				<ul>
+					<p>
+						We will get more in-depth later on. Until then, here's an
+						explanation of the above code.<br />
+		  
+						- The first line. <span class="InlineCode">^j::</span> is 
+						the Hotkey. <span class="InlineCode">^</span> means 
+						<span class="key">CTRL</span>, 
+						<span class="InlineCode">j</span> is the letter 
+						<span class="key">j</span>. anything to the <b>left</b> of
+						<span class="InlineCode">::</span> are the keys you need to press.<br />
+		  
+						- The second line. <span class="InlineCode">Send, My First Script</span> is how you SEND keystrokes. <span class="InlineCode">SEND</span> is the command, anything after the comma (,) will be typed.<br />
+		  
+						- The third line. <span class="InlineCode">Return</span>. Return will become your best friend. It literally STOPS code from going any further, to the lines below. This will prevent many issues when you start having a lot of stuff in your scripts.
+					</p>
+					<hr />
 					<li>8. Save the File.</li>
 					<li>9. Double-Click the file/icon in the desktop to run it. Open notepad or (anything you can type in) and press <span class="key">Ctrl</span> and <span class="key">J</span>.</li>
 					<li>10. Hip Hip Hooray! Your first script is done. Go get some reward snacks then return to reading the rest of this tutorial.</li>
@@ -227,17 +219,17 @@ Return
 
 				<p>Here is a hotkey:</p>
 
-				<pre class="MultiCode">
+<pre class="MultiCode">
 ^j::
     Send, My First Script
 Return
-				</pre>
+</pre>
 
 				<p>Here is a hotstring:</p>
 
-				<pre class="MultiCode">
+<pre class="MultiCode">
 ::ftw::Free the whales
-				</pre>
+</pre>
 
 				<p>The difference between the two examples is that the hotkey will be triggered when you press <span class="key">CTRL &amp; J</span> while the hotstring will convert your typed "ftw" into "Free the whales".</p>
 
@@ -246,18 +238,18 @@ Return
 					Good question. A hotkey is created by using a single pair of ::'s. The key or key combo needs to go on the <b>left</b> of the <span class="InlineCode">::</span>. And the content needs to go below, followed by a <span class="InlineCode">return</span>.<br />
 				</p>
 				<p class="Style1">Note: Their are exceptions, but those tend to cause confusion a lot of the time. So it won't be covered in the tutorial, at least, not right now.</p>
-				<pre class="MultiCode">
+<pre class="MultiCode">
 esc::
    MsgBox Escape!!!!
 return
-				</pre>
+</pre>
 				<p>A hotstring has a pair of ::'s on each side of the text you want to trigger the text replacement. While the text to replace your typed text goes on the <b>right</b> of the second pair of ::'s.</p>
 				<p>Hotstring, as mentioned above, can also launch scripted actions. Thats fancy talk for <i>"do pretty much anything"</i>. Same with hotkeys.</p>
-				<pre class="MultiCode">
+<pre class="MultiCode">
 ::btw::
    MsgBox You typed "btw".
 return
-				</pre>
+</pre>
 
 				<p>
 					A nice thing to know is that you can have many lines of 
@@ -781,19 +773,19 @@ MsgBox, We are now 'outside' the if. We did not need {}'s since there was only 1
       Variables can be assigned a few ways, We'll cover the most common forms. Please pay attention to the equal sign (=).
       <ol>
          <li class="hover">variable=text<br />
-			<span class="indented">This is the simplest form for a variable, traditional assignment. Simply type in your text and done.</span>
+			<div class="indented">This is the simplest form for a variable, traditional assignment. Simply type in your text and done.</div>
 		</li>
 		<li class="hover">variable=%variable2%<br />
-			<span>Same as above, but you are assigning a variable to a different variables value.</span>
+			<div class="indented">Same as above, but you are assigning a variable to a different variables value.</div>
 		</li>
 		<li class="hover">variable:="text"<br />
-			<span>This is an expression assignment, due to the : before the =. any text needs to be in "quotes".</span>
+			<div class="indented">This is an expression assignment, due to the : before the =. any text needs to be in "quotes".</div>
 		</li>
 		<li class="hover">variable:=variable2<br />
-			<span class="indented">In expression mode, variables do not need %'s.</span>
+			<div class="indented">In expression mode, variables do not need %'s.</div>
 		</li>
 		<li class="hover">variable:=6+8/3*2-sqrt(9)<br />
-			<span class="indented">Thanks to expressions, you can do math!</span>
+			<div class="indented">Thanks to expressions, you can do math!</div>
 		</li>
 	</ol>
          Number 1 &amp; 2 can be combined. <span class="InlineCode">var=%var2% some text %var3%.</span><br />

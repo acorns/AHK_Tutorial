@@ -154,4 +154,7 @@ h1:hover,h3:hover
 }
 
 
-
+.indented {
+	text-indent: 1.5em;
+	margin-bottom: 1em;
+}
