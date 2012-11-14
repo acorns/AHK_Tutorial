@@ -99,7 +99,7 @@ h1:hover,h3:hover
 .InlineCode
 {
    color:               #7F9F7F;
-   font-size:           80%
+   font-size:           80%;
    font-family:         "Andale Mono", "Courier New", Courier, monospace;
    background-color:    #eaeaea;
    padding-left:        3px;
@@ -154,4 +154,7 @@ h1:hover,h3:hover
 }
 
 
-
+.indented {
+	text-indent: 1.5em;
+	margin-bottom: 1em;
+}
