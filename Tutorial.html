@@ -14,7 +14,6 @@
 				<ol>
 					<li><a href="#s0" class="toci">The basics</a>
 						<ul>
-                  this is a test
 							<li><a href="#s01" class="toci">Downloading AutoHotkey</a></li>
 							<li><a href="#s02" class="toci">How to create a script</a></li>
 							<li><a href="#s03" class="toci">You cannot merge commands</a></li>
@@ -96,13 +95,7 @@
 						<a href="http://www.autohotkey.com/download/" class="url">http://www.autohotkey.com/download/</a>
 					</li>
 					<li>
-						Here's where the confusion comes in. There are several
-						versions to choose from: AutoHotkey_L or 
-						AutoHotkey_Basic. Since you are new, you should choose
-						AutoHotkey_L.
-					</li>
-					<li>
-						During installation of AutoHotkey_L, you will be asked
+						During installation of AutoHotkey, you will be asked
 						to choose from UNICODE or ANSI. In short, you would
 						probably want to choose UNICODE. It has support for
 						non-English letters and numbers (characters). Keep
@@ -465,17 +458,18 @@ Return                                     ; This ends the hotkey. The code belo
 
 			   <h1>3 - <a id="s2">Sending key strokes</a></h1>
 			   <p>
-				  So now you decided that you want to send (type) keys to a program. We can do that. Use the <a href="http://www.autohotkey.com/docs/commands/Send.htm" class="url">Send</a> command. Send literally sends keystrokes, to simulate typing or pressing of keys.
+				  So now you decided that you want to send (type) keys to a program. We can do that. Use the <a href="http://www.autohotkey.com/docs/commands/Send.htm" class="url">Send</a> command. Send literally sends keystrokes, to simulate typing or pressing of keys.<br /><br />
+              Before we get into things, here are some common issues that people have:<br />
+					Just like Hotkeys, Send has special keys too. <a href="http://www.autohotkey.com/docs/commands/Send.htm" class="url">Lots and lots of them.</a><br />
+					Here are the 4 most common symbols:
 			   </p>
 
 				<div>
-					Before we get into things, here are some common issues that people have:<br />
-					Just like Hotkeys, Send has special keys too. <a href="http://www.autohotkey.com/docs/commands/Send.htm" class="url">Lots and lots of them.</a><br /><br />
-					Here are the 4 most common symbols:
+					<hr />
 					<p style="margin-top: 0.7em; margin-bottom: 0.7em; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif, 'MS sans serif'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); "><span class="red" style="color: rgb(255, 0, 0); font-weight: bold; ">!</span>: Sends the ALT key. For example, <em>Send This is text!a</em> would send the keys "This is text" and then press ALT+a. <strong>Note</strong>: !A produces a different effect in some programs than !a. This is because !A presses ALT+SHIFT+A and !a presses ALT+a. If in doubt, use lowercase.</p><p style="margin-top: 0.7em; margin-bottom: 0.7em; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif, 'MS sans serif'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); "><span class="red" style="color: rgb(255, 0, 0); font-weight: bold; ">+</span>: Sends the SHIFT key. For example, <em>Send +abC </em>would send the text "AbC", and <em>Send !+a</em> would press ALT+SHIFT+a.</p><p style="margin-top: 0.7em; margin-bottom: 0.7em; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif, 'MS sans serif'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); "><span class="red" style="color: rgb(255, 0, 0); font-weight: bold; ">^</span>: Sends the CONTROL (Ctrl) key. For example, <em>Send ^!a</em> would press CTRL+ALT+a, and <em>Send ^{Home}</em> would send CONTROL+HOME. <strong>Note</strong>: ^A produces a different effect in some programs than ^a. This is because ^A presses CONTROL+SHIFT+A and ^a presses CONTROL+a. If in doubt, use lowercase.</p><p style="margin-top: 0.7em; margin-bottom: 0.7em; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif, 'MS sans serif'; font-size: 12px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); "><span class="red" style="color: rgb(255, 0, 0); font-weight: bold; ">#</span>: Sends the WIN key (the key with the Windows logo) therefore <em>Send #e</em> would hold down the Windows key and then press the letter "e".</p>
 					<hr />
 				</div>
-				<p><i><strong>The next couple of paragraphs are talking about the <a href="http://www.autohotkey.com/docs/commands/Send.htm" class="url">table on send page</a>.</strong><br /><br /></i></p>
+				<p><i><strong>The next couple of paragraphs are talking about the <a href="http://www.autohotkey.com/docs/commands/Send.htm" class="url">table on send page</a>.</strong><br /></i></p>
 				<p class="Style1">
 					Note:<br />This table <b>does not</b> apply to <a href="http://www.autohotkey.com/docs/Hotkeys.htm" class="url">hotkeys</a>. Meaning, you do not wrap <span class="key">CTRL</span> or <span class="key">ENTER</span> (or any other key) inside {}'s when making a hotkey.
 				</p><br />
@@ -505,8 +499,8 @@ send, This text has been typed{!}
 </pre>
 
 <pre class="MultiCode">
-; Same as above, but with the ENTER key. AHK would type out "enter"if
-; it wasn't wrapped in {}'s.
+; Same as above, but with the ENTER key. AHK would type out "enter" if ...
+; ... it wasn't wrapped in {}'s.
 send, Multiple enter lines have enter been sent. ; WRONG
 send, Multiple{enter}lines have{enter}been sent. ; CORRECT
 </pre>
@@ -531,27 +525,27 @@ send, abc       ; CORRECT
 </pre>
 					</div>
 					<div>
-						To hold down or release a key, enclose the key name in brakets and then use the word UP or DOWN.
+						To hold down or release a key, enclose the key name in brackets and then use the word UP or DOWN.
 
 <pre class="MultiCode">
 ; This is how you hold 1 key down and press another key (or keys).
 ; If 1 method doesn't work in your program, please try the other.
-send, ^s                    ; Both of these send CTRL+s
-send, {ctrl down}s{ctrl up} ; Both of these send CTRL+s
+send, ^s                     ; Both of these send CTRL+s
+send, {ctrl down}s{ctrl up}  ; Both of these send CTRL+s
 Send, {ctrl down}c{ctrl up}
 Send, {b down}{b up}
 Send, {TAB down}{TAB up}
-Send, {Up down} ; Press down the up-arrow key.
-Sleep, 1000     ; Keep it down for one second.
-Send, {Up up}   ; Release the up-arrow key.
+Send, {Up down}  ; Press down the up-arrow key.
+Sleep, 1000      ; Keep it down for one second.
+Send, {Up up}    ; Release the up-arrow key.
 </pre>
 					</div>
 				</div>
 			<div>
 				But now you are wondering 
 				<i>"How can I make my really long send commands readable?"</i>.
-				Easy. Use what is known as a Continuation Section Simply specify an 
-				opening parenthesis on a new, then your content and then a closing 
+				Easy. Use what is known as a Continuation Section. Simply specify an 
+				opening parenthesis on a new line, then your content, finally a closing 
 				parenthesis on its own line. For more information, read about 
 				<a href="http://www.autohotkey.com/docs/Scripts.htm#continuation" class="url">Continuation Sections</a>.
 
@@ -598,8 +592,8 @@ Apples are a fruit.
 			<ul>
 				<li>Use <a href="http://www.autohotkey.com/docs/commands/Send.htm#SendPlayDetail" class="url">SendPlay</a> via: 1) the SendPlay command; 2) using <a href="http://www.autohotkey.com/docs/commands/SendMode.htm" class="url">SendMode</a> Play; and/or 3) the <a href="http://www.autohotkey.com/docs/Hotstrings.htm#SendMode" class="url">hotstring</a> option SP.</li>
 				<li>Increase <a href="http://www.autohotkey.com/docs/commands/SetKeyDelay.htm" class="url">SetKeyDelay</a>. For example:</li>
-				<li>SetKeyDelay, 0, 50</li>
-				<li>SetKeyDelay, 0, 50, Play</li>
+				<li><span class="InlineCode">SetKeyDelay, 0, 50</span></li>
+				<li><span class="InlineCode">SetKeyDelay, 0, 50, Play</span></li>
 				<li>Try <a href="http://www.autohotkey.com/docs/commands/ControlSend.htm" class="url">ControlSend</a>, which might work in cases where the other Send modes fail.</li>
 			</ul>
 		</div>
@@ -625,7 +619,7 @@ Run, http://www.autohotkey.com
 
    <div>
       Their are some other advanced features aswell, such as Command-Line parameters and CLSID.<br />
-      If you want to learn more about that stuff, check this page out the <a href="http://www.autohotkey.com/docs/commands/Run.htm" class="url">run page</a>.
+      If you want to learn more about that stuff, visit the <a href="http://www.autohotkey.com/docs/commands/Run.htm" class="url">run page</a>.
       <br />
       Here are a few more samples:
 
@@ -634,7 +628,7 @@ Run, http://www.autohotkey.com
 Run, Notepad.exe
 Run, MsPaint.exe
 
-; Run the "My Documents" folder using the built-in AHK variable
+; Run the "My Documents" folder using the built-in <a href="http://www.autohotkey.com/docs/Variables.htm#BuiltIn" class="url">AHK variable</a>
 Run, %A_MyDocuments%
 
 ; Run some websites
@@ -664,7 +658,7 @@ Run, http://www.google.com
       You can tell what a command is by looking at its syntax (the way it looks). Commands do not use parenthesis "()" around the parameters like functions do. So a command would look like this:<br />
       <span class="InlineCode">Command, parameter1, parameter2, parameter3</span><br />
       <a href="http://www.autohotkey.com/docs/commands.htm" class="url">This page</a> contains a list of all Commands that come with AHK.<br /><br />
-      When using commands, you cannot squish other commands onto the same line as a previous command (exception: <a href="http://www.autohotkey.com/docs/commands/IfEqual.htm" class="url">ifEqual</a>).<br />
+      When using commands, you cannot squish other commands onto the same line as a previous command (exception:  <a href="http://www.autohotkey.com/docs/commands/IfEqual.htm" class="url">ifEqual</a>).<br />
       You cannot put commands inside the parameters of other commands.
    </p>
 
@@ -780,7 +774,7 @@ MsgBox, We are now 'outside' the if. We did not need {}'s since there was only 1
 			<div class="indented">Same as above, but you are assigning a variable to a different variables value.</div>
 		</li>
 		<li class="hover">variable:="text"<br />
-			<div class="indented">This is an expression assignment, due to the : before the =. any text needs to be in "quotes".</div>
+			<div class="indented">This is an expression assignment, due to the : before the =. Any text needs to be in "quotes".</div>
 		</li>
 		<li class="hover">variable:=variable2<br />
 			<div class="indented">In expression mode, variables do not need %'s.</div>
@@ -790,7 +784,7 @@ MsgBox, We are now 'outside' the if. We did not need {}'s since there was only 1
 		</li>
 	</ol>
          Number 1 &amp; 2 can be combined. <span class="InlineCode">var=%var2% some text %var3%.</span><br />
-         3, 4 &amp; 5 can be combined too: <span class="InlineCode">var:="The value of 5+5 is: " 5+VariableContainingNumber</span>
+         3, 4 &amp; 5 can be combined too. <span class="InlineCode">var:="The value of 5+ " Variable " is: " 5+Variable</span>
    </div>
    <hr />
 
@@ -813,9 +807,9 @@ MsgBox, We are now 'outside' the if. We did not need {}'s since there was only 1
    <div>
       When to use %'s:
       <ol>
-         <li>When you are using Commands (see above), you use percent signs.<br />
+         <li>When you are using Commands (see above) you use percent signs.<br />
          -- Except when the parameter is OutputVar or InputVar.</li>
-         <li>When you are assigning a variable to a value using a plain equal sign.</li>
+         <li>When you are assigning a variable to a value using a traditional mode (an equal sign with no symbol infront of it).</li>
       </ol>
 
       When <b>not</b> to use %'s:
@@ -836,8 +830,7 @@ If (<span style="color:red">Var1</span> &lt;&gt; <span style="color:red">Var2</s
 
    <h2>b. <a id="s52">Getting user input</a></h2>
    <div>
-   Sometimes you want to have the user to choose the value of stuff. Their are several ways of doing this, but the simplest way is <a href="http://www.autohotkey.com/docs/commands/InputBox.htm" class="url">Inputbox</a>
-Here is a simple example on how to ask the user a couple of questions and doing some stuff with what was entered.
+   Sometimes you want to have the user to choose the value of stuff. Their are several ways of doing this, but the simplest way is <a href="http://www.autohotkey.com/docs/commands/InputBox.htm" class="url">Inputbox</a>. Here is a simple example on how to ask the user a couple of questions and doing some stuff with what was entered.
 
 <pre class="MultiCode">
 InputBox, OutputVar, Question 1, What is your first name?
@@ -870,26 +863,25 @@ MsgBox You pressed YES.  ; Otherwise, the user picked yes.
    <h1>7 - <a id="s6">Other</a> helpful goodies</h1>
    <p>
    We have reached the end of our journey, my good friend. I hope you have learned something.
-   But before we go, here are some other things that I think you should know! Enjoy!
+   But before we go, here are some other things that I think you should know. Enjoy!
    </p>
 
    <h2>a. <a id="s61">The mysterious []'s</a></h2>
    <div>
    Throughout the documentation, you will see these two symbols (<b>[</b> and <b>]</b>) surrounding code in the yellow syntax box at the top of almost all pages. Anything inside of these brackets are <b><i>OPTIONAL</i></b>. Meaning the stuff inside can be left out if you don't need them. When writing your code, it is very important to <b>NOT</b> type the []'s in your code.<br /><br />
-   On the <a href="http://www.autohotkey.com/docs/commands/ControlGetText.htm" class="url">ControlGetText</a> page you will see this (without colors):<br />
-   <span class="InlineCode">ControlGetText, OutputVar <span style="color:red"><b>[</b></span><span style="color:orange">, Control, WinTitle, WinText, ExcludeTitle, ExcludeText</span><span style="color:red"><b>]</b></span></span><br /><br />
+   On the <a href="http://www.autohotkey.com/docs/commands/ControlGetText.htm" class="url">ControlGetText</a> page you will see this (without the colors):<br />
+   <span class="InlineCode">ControlGetText, OutputVar <span style="color:red"><b>[</b></span><span style="color:navy">, Control, WinTitle, WinText, ExcludeTitle, ExcludeText</span><span style="color:red"><b>]</b></span></span><br /><br />
    So you could simply do this if you wanted:<br />
    <span class="InlineCode">ControlGetText, OutputVar</span><br /><br />
 
    Or add in some more details:<br />
    <span class="InlineCode">ControlGetText, OutputVar, Control, WinTitle</span><br /><br />
 
-   What if you wanted to ExludeTitle but not fill in WinText or WinTitle? Simple!<br />
+   What if you wanted to use ExludeTitle but not fill in WinText or WinTitle? Simple!<br />
    <span class="InlineCode">ControlGetText, OutputVar, Control,,, ExcludeTitle</span><br /><br />
 
    <p class="Style1">Please note that you cannot IGNORE parameters, you can however leave them blank.<br />
    If you were to Ignore "WinTitle, WinText", it would look like this and cause issues:<br />
-   This is invalid.<br />
    <span class="InlineCode">ControlGetText, OutputVar, Control, ExcludeTitle</span><br />
    This is valid.<br />
    <span class="InlineCode">ControlGetText, OutputVar, Control,,, ExcludeTitle</span></p>
@@ -977,7 +969,7 @@ else
    </div>
 
    <h2>e. <a id="s65">Asking for Help</a></h2>
-   Before you ask, try doing some research yourself or try to code it yourself. If that did not yeild results that satisfy you, read below.
+   Before you ask, try doing some research yourself or try to code it yourself. If that did not yield results that satisfy you, read below.
    <ul>
       <li>Don't be afraid to ask for help, even the smartest people ask others for help.</li>
       <li>Don't be afraid to show what you tried, even if you think it's silly.</li>
@@ -990,7 +982,7 @@ else
       <li>Enjoy</li>
    </ul>
 
-   If you don't get an answer right away, wait atleast 1 day (24 hours) before asking for more help. We love to help, but we also do this for free, on our own time. We might be at work, sleeping, gaming, with family or just too busy to help.<br />
+   If you don't get an answer right away, wait atleast 1 day (24 hours) before asking for more help. We love to help, but we also do this for free on our own time. We might be at work, sleeping, gaming, with family or just too busy to help.<br />
    And while you wait for help, you can try learning and doing it yourself. It's a good feeling, making something yourself without help.
 
    <h2>f. <a id="s66">Other links</a></h2>
