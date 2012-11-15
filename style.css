@@ -45,7 +45,7 @@ pre
 
 .page
 {
-   width:            950px;
+   width:            960px;
    margin-left:      auto;
    margin-right:     auto;
    background-color: #efefef;
@@ -98,10 +98,10 @@ h1:hover,h3:hover
 
 .InlineCode
 {
-   color:               #7F9F7F;
-   font-size:           80%;
+   color:               #327906;
+   font-weight:         500;
    font-family:         "Andale Mono", "Courier New", Courier, monospace;
-   background-color:    #eaeaea;
+   background-color:    #dddddd;
    padding-left:        3px;
    padding-right:       3px;
    border-top:          #c4c4c4;
@@ -114,7 +114,7 @@ h1:hover,h3:hover
 
 .MultiCode
 {
-   color:            #6a8a60;
+   color:            #006600;
    font-family:      "Andale Mono", "Courier New", Courier, monospace;
    background-color: #ffffdd;
    padding-left:     3px;
@@ -134,7 +134,7 @@ h1:hover,h3:hover
    border-left:       #33A64D;
    border-left-style: solid;
    border-left-width: 2px;
-   width:             500px;
+   width:             530px;
    margin-left:       1em;
 }
 
