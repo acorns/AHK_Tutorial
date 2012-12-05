@@ -129,12 +129,12 @@ h1:hover,h3:hover
 .Style1
 {
    background-color:  #CAFFD5;
-   padding-left:      6px;
+   padding-left:      12px;
    padding-right:     3px;
    border-left:       #33A64D;
    border-left-style: solid;
    border-left-width: 2px;
-   width:             530px;
+   max-width:         550px;
    margin-left:       1em;
 }
 
