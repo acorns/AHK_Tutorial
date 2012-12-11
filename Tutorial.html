@@ -869,6 +869,23 @@ else
 <a href="http://www.autohotkey.com/docs/commands/IfMsgBox.htm" class="url">IfMsgBox</a>, No
    return                ; If No, stop the code from going further.
 MsgBox You pressed YES.  ; Otherwise, the user picked yes.
+</pre>
+<pre class="MultiCode">
+; Some examples showing when to use percents and when not
+Variable=text                      ; Assign a variable some text using 'traditional' assignment.
+VariableNumber:=6                  ; Assign a variable a number using 'expressional' assignment.
+Variable2=%Variable%               ; Assign a variable to another variable using traditional assignment.
+Variable3:=Variable                ; Assign a variable to another variable using expressional assignment.
+Variable4.=Variable                ; Append a variable to the end of another variable using expressional assignment.
+Variable5+=VariableNumber          ; Add the value of a variable to another variable using expressional assignment.
+Variable5-=VariableNumber          ; Subtract the value of a variable from another variable using expressional assignment.
+Variable6:=SubStr(Variable, 2, 2)  ; Variable inside a function. This is always an expression.
+MsgBox, %Variable%                 ; Variable inside a command. 
+StringSplit, Variable, Variable, x ; Variable inside a command that uses InputVar and OutputVar.
+if (VariableNumber=6)              ; Whenever an IF has parenthesis, it'll be an expression. So no %'s.
+If (Variable != VariableNumber)    ; Whenever an IF has parenthesis, it'll be an expression. So no %'s.
+if VariableNumber=6                ; Without parenthesis, the if is Traditional. However, only variables on the 'right side' need %'s. 
+If Var1 < %Var2%                   ; Without parenthesis, the if is Traditional. However, only variables on the 'right side' need %'s. 
 </pre></div>
 
 
