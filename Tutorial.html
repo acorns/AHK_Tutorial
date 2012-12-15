@@ -885,7 +885,7 @@ StringSplit, Variable, Variable, x ; Variable inside a command that uses InputVa
 if (VariableNumber=6)              ; Whenever an IF has parenthesis, it'll be an expression. So no %'s.
 If (Variable != VariableNumber)    ; Whenever an IF has parenthesis, it'll be an expression. So no %'s.
 if VariableNumber=6                ; Without parenthesis, the if is Traditional. However, only variables on the 'right side' need %'s. 
-If Var1 < %Var2%                   ; Without parenthesis, the if is Traditional. However, only variables on the 'right side' need %'s. 
+If Var1 &lt; %Var2%                   ; Without parenthesis, the if is Traditional. However, only variables on the 'right side' need %'s. 
 </pre></div>
 
 
