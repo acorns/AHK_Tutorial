@@ -1,16 +1,10 @@
-
 #toc
 {
-   border:              black;
-   border-top-style:    solid;
-   border-bottom-style: solid;
-   border-left-style:   double;
-   border-right-style:  double;
-   border-top-width:    2px;
-   border-bottom-width: 2px;
-   border-left-width:   4px;
-   border-right-width:  4px;
-   width:               350px;
+   border: 1px solid #bbb;
+   padding:.2em;
+   width: 350px;
+   position: fixed;
+   left: 30px;
 }
 
 
@@ -49,6 +43,7 @@ pre
    margin-left:      auto;
    margin-right:     auto;
    background-color: #efefef;
+   padding: .5em;
 }
 
 body
