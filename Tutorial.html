@@ -197,11 +197,12 @@ Return
 						<li>Look for <b>AutoHotkey.chm</b> or a file that says AutoHotkey and has a yellow question mark on it.</li>
 						<li>Done!</li>
 					</ol>
+               <p class="Style1">
 					Online Links:<br />
 					<a href="http://www.autohotkey.com/docs/" class="url">Documentation</a><br />
 					<a href="http://www.autohotkey.com/docs/commands.htm" class="url">Command List</a><br />
 					<a href="http://www.autohotkey.com/docs/Functions.htm#BuiltIn" class="url">Functions</a><br />
-					<a href="http://www.autohotkey.com/docs/Variables.htm" class="url">Variables</a>
+					<a href="http://www.autohotkey.com/docs/Variables.htm" class="url">Variables</a></p>
 				</div>
 
 				<h1>2 - <a id="s1">Hotkeys & Hotstrings</a></h1>
@@ -266,7 +267,7 @@ return
 			   <h2>a. <a id="s11">Keys and their mysterious symbols</a></h2>
 
 			   <div>
-					You might be wondering <i>"How the crud am I supposed to know that ^ means CTRL?!"</i>. Well, good question. to help you learn what ^ and other symbols mean, gaze upon this chart:<br />
+					You might be wondering <i>"How the crud am I supposed to know that ^ means CTRL?!"</i>. Well, good question. To help you learn what ^ and other symbols mean, gaze upon this chart:<br />
 					<table border="1" style="font-size: 12px; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif, 'MS sans serif'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); ">
 						<tbody>
 							<tr style="font-size: 12px; ">
@@ -331,7 +332,7 @@ return
 							<a href="http://www.autohotkey.com/docs/KeyList.htm" style="text-decoration: none; color: rgb(170, 0, 170); ">Key List</a> 
 							for a complete list of keyboard keys and mouse/joystick 
 							buttons)<br />
-							(For the full list, see the 
+							(For the full list of symbols, see the 
 							<a href="http://www.autohotkey.com/docs/Hotkeys.htm" class="url">Hotkey</a> page)
 						</strong>
 					</p>
@@ -406,10 +407,17 @@ return
 Return
 </pre>
 
-			   <p>When #IfWin commands are turned off (or never used in a script), all hotkeys and hotstrings are enabled for all windows.</p>
-			   <p class="Style1">For more in-depth information and similar commands, check out <a href="http://www.autohotkey.com/docs/commands/_IfWinActive.htm" class="url">#IfWinActive</a>.</p>
+			   <p>When #IfWin commands are turned off (or never used in a 
+               script), all hotkeys and hotstrings are enabled for all windows.</p>
+			   <p class="Style1">For more in-depth information and similar 
+            commands, check out:<br />
+               <a href="http://www.autohotkey.com/docs/commands/_IfWinActive.htm" class="url">#IfWinActive</a></p>
 			   <h2>c. <a id="s13">Multiple hotkeys/hotstrings per file</a></h2>
-			   <p>This, for some reason crosses some peoples minds. So I'll set it clear: AutoHotkey has the ability to have <i>as many</i> hotkeys and hotstrings in 1 file as you want. Whether it's 1, or 3253 (or more).</p>
+			   
+            <p>This, for some reason crosses some peoples minds. So 
+               I'll set it clear: AutoHotkey has the ability to 
+               have <i>as many</i> hotkeys and hotstrings in 1 
+               file as you want. Whether it's 1, or 3253 (or more).</p>
 
 <pre class="MultiCode">
 #i::
@@ -458,8 +466,10 @@ Return                                     ; This ends the hotkey. The code belo
 
 			   <h1>3 - <a id="s2">Sending key strokes</a></h1>
 			   <p>
-				  So now you decided that you want to send (type) keys to a program. We can do that. Use the <a href="http://www.autohotkey.com/docs/commands/Send.htm" class="url">Send</a> command. Send literally sends keystrokes, to simulate typing or pressing of keys.<br /><br />
-              Before we get into things, here are some common issues that people have:<br />
+				  So now you decided that you want to send (type) keys to a 
+              program. We can do that. Use the <a href="http://www.autohotkey.com/docs/commands/Send.htm" class="url">Send</a> command. Send literally sends keystrokes, to simulate typing or pressing of keys.<br /><br />
+              Before we get into things, here are some common issues 
+              that people have:<br />
 					Just like Hotkeys, Send has special keys too. <a href="http://www.autohotkey.com/docs/commands/Send.htm" class="url">Lots and lots of them.</a><br />
 					Here are the 4 most common symbols:
 			   </p>
@@ -574,16 +584,29 @@ Apples are a fruit.
 		<h2>a. <a id="s21">Games</a> </h2>
 		<p>
 			<b><span style="color:red;">This is important!</span></b><br />
-			A lot of games, especially modern ones, have cheat prevention software. Things like GameGuard, Hackshield, PunkBuster and several other types. If a game has a cheat prevention system and your hotkeys, hotstrings and send commands do not work, you are out of luck.<br />
-			Not only is bypassing these systems in violation of the games policies and will get you banned, they are complex to work around. Their are methods that can increase the chance of working in some games, but there is no magical <i>"make it work in my game now!!!"</i> button. so try <b>ALL</b> of these before giving up.<br />
+			A lot of games, especially modern ones, have cheat prevention software. 
+         Things like GameGuard, Hackshield, PunkBuster and several others. 
+         If a game has a cheat prevention system and your hotkeys,
+         hotstrings and send commands do not work, you are out of luck.<br />
+			Not only is bypassing these systems in violation of the games policies
+         and will get you banned, they are complex to work around. 
+         Their are methods that can increase the chance of working in some games, but there is no 
+         magical <i>"make it work in my game now!!!"</i> button. so try <b>ALL</b> 
+         of these before giving up.<br />
 		</p>
 
 		<p>
-			Their are also known issues with DirectX. If you are having issues and you know the game uses DirectX, try the stuff above. You should also try running the game in Windowed Mode, if possible. That fixes some DirectX issues.<br />
-			More DirextX issues may occur when using pixel or image commands. Colors might turn out black (0x000000) no matter the color you try to get. That is another tricky thing to fix. Try running in Windowed Mode if you can.
+			Their are also known issues with DirectX. If you are having issues 
+         and you know the game uses DirectX, try the stuff above. You should 
+         also try running the game in Windowed Mode, if possible. That fixes 
+         some DirectX issues.<br />
+			More DirextX issues may occur when using pixel or image commands. 
+         Colors might turn out black (0x000000) no matter the color you try 
+         to get. That is another tricky thing to fix. Try running in Windowed Mode if you can.
 		</p>
 		<p>
-			There is no single solution to make AutoHotkey work in all programs. If everything you try fails, it may not be possible to use AutoHotkey for your needs.
+			There is no single solution to make AutoHotkey work in all programs. 
+         If everything you try fails, it may not be possible to use AutoHotkey for your needs.
 		</p>
 		<div>
 			<hr />
@@ -789,13 +812,7 @@ MsgBox, We are now 'outside' the if. We did not need {}'s since there was only 1
    <hr />
 
    <p class="Style1">
-      Any equal sign (<b>=</b>) with a symbol infront of it is always an expression. So <span class="InlineCode">:=</span> <span class="InlineCode">+=</span> <span class="InlineCode">-=</span> <span class="InlineCode">.=</span> etc. are all expressions. A single = is used for assignment only when outside an <a href="http://www.autohotkey.com/docs/commands/IfExpression.htm" class="url">if expression</a>.
-   </p>
-
-   <h2>Variables and Equals inside of if (...)'s</h2>
-
-   <p>
-      Variables inside of if's act a little different. When using =, it acts as a comparison and not an assignment. You can use := or any other equal sign to assign. <span class="InlineCode">if (var:=5.+5 = 10)</span> will assign the variable <b>var</b> to the value of <b>5+5</b>, and the if will still compare 5+5 to 10! How nifty.
+      Any equal sign (<b>=</b>) with a symbol infront of it is called an <b>Assignment Operator</b>, which are always an expression. So <span class="InlineCode">:=</span> <span class="InlineCode">+=</span> <span class="InlineCode">-=</span> <span class="InlineCode">.=</span> etc. always use expressions.
    </p>
 
 
@@ -852,6 +869,23 @@ else
 <a href="http://www.autohotkey.com/docs/commands/IfMsgBox.htm" class="url">IfMsgBox</a>, No
    return                ; If No, stop the code from going further.
 MsgBox You pressed YES.  ; Otherwise, the user picked yes.
+</pre>
+<pre class="MultiCode">
+; Some examples showing when to use percents and when not
+Variable=text                      ; Assign a variable some text using 'traditional' assignment.
+VariableNumber:=6                  ; Assign a variable a number using 'expressional' assignment.
+Variable2=%Variable%               ; Assign a variable to another variable using traditional assignment.
+Variable3:=Variable                ; Assign a variable to another variable using expressional assignment.
+Variable4.=Variable                ; Append a variable to the end of another variable using expressional assignment.
+Variable5+=VariableNumber          ; Add the value of a variable to another variable using expressional assignment.
+Variable5-=VariableNumber          ; Subtract the value of a variable from another variable using expressional assignment.
+Variable6:=SubStr(Variable, 2, 2)  ; Variable inside a function. This is always an expression.
+MsgBox, %Variable%                 ; Variable inside a command. 
+StringSplit, Variable, Variable, x ; Variable inside a command that uses InputVar and OutputVar.
+if (VariableNumber=6)              ; Whenever an IF has parenthesis, it'll be an expression. So no %'s.
+If (Variable != VariableNumber)    ; Whenever an IF has parenthesis, it'll be an expression. So no %'s.
+if VariableNumber=6                ; Without parenthesis, the if is Traditional. However, only variables on the 'right side' need %'s. 
+If Var1 &lt; %Var2%                   ; Without parenthesis, the if is Traditional. However, only variables on the 'right side' need %'s. 
 </pre></div>
 
 
