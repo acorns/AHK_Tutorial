@@ -228,20 +228,20 @@ Return
 					<p>The difference between the two examples is that the hotkey will be triggered when you press <span class="key">CTRL &amp; J</span> while the hotstring will convert your typed "ftw" into "Free the whales".</p>
 					<p>
 						<i>"So, how exactly does a person such as myself create a hotkey?"</i>
-						Good question. A hotkey is created by using a single pair of ::'s. The key or key combo needs to go on the <b>left</b> of the <span class="InlineCode">::</span>. And the content needs to go below, followed by a <span class="InlineCode">return</span>.<br />
+						Good question. A hotkey is created by using a single pair of ::'s. The key or key combo needs to go on the <b>left</b> of the <span class="InlineCode">::</span>. And the content needs to go below, followed by a <span class="InlineCode">Return</span>.<br />
 					</p>
 					<p class="Note">Note: Their are exceptions, but those tend to cause confusion a lot of the time. So it won't be covered in the tutorial, at least, not right now.</p>
 <pre class="MultiCode">
 esc::
    MsgBox Escape!!!!
-return
+Return
 </pre>
 					<p>A hotstring has a pair of ::'s on each side of the text you want to trigger the text replacement. While the text to replace your typed text goes on the <b>right</b> of the second pair of ::'s.</p>
 					<p>Hotstring, as mentioned above, can also launch scripted actions. Thats fancy talk for <i>"do pretty much anything"</i>. Same with hotkeys.</p>
 <pre class="MultiCode">
 ::btw::
    MsgBox You typed "btw".
-return
+Return
 </pre>
 
 					<p>
@@ -259,7 +259,7 @@ return
    WinWaitActive, Untitled - Notepad
    send, 7 lines{!}{enter}
    sendinput, inside the ctrl{+}j hotkey
-return
+Return
 </pre>
 
 					<h2>a. <a id="s11">Keys and their mysterious symbols</a></h2>
@@ -385,7 +385,7 @@ Numpad0 & Numpad2::Run Notepad                                            |
 #IfWinActive ahk_class Notepad
 #space::
    MsgBox, You pressed Win+Spacebar in Notepad.
-return
+Return
 ::msg::You typed msg in Notepad
 #IfWinActive
 
@@ -393,7 +393,7 @@ return
 #IfWinActive untitled - Paint
 #space::
    MsgBox, You pressed Win+Spacebar in MSPaint!
-return
+Return
 ::msg::You typed msg in MSPaint!
 #IfWinActive
 </pre>
@@ -424,15 +424,15 @@ Return
 <pre class="MultiCode">
 #i::
    run, http://www.google.com/
-return
+Return
 
 ^p::
    run, notepad.exe
-return
+Return
 
 ~j::
    send, ack
-return
+Return
 
 ::acheiv::achiev
 ::achievment::achievement
@@ -492,12 +492,12 @@ Return                                     ; This ends the hotkey. The code belo
 ; WRONG
 {LCtrl}::
   send, AutoHotkey
-return
+Return
 
 ; CORRECT
 LCtrl::
   send, AutoHotkey
-return
+Return
 </pre>
 					</div>
 					<div>
@@ -858,7 +858,7 @@ else
 <pre class="MultiCode">
 <a href="http://www.autohotkey.com/docs/commands/MsgBox.htm" class="url">MsgBox</a>, 4, , Would you like to continue?
 <a href="http://www.autohotkey.com/docs/commands/IfMsgBox.htm" class="url">IfMsgBox</a>, No
-   return                ; If No, stop the code from going further.
+   Return                ; If No, stop the code from going further.
 MsgBox You pressed YES.  ; Otherwise, the user picked yes.
 </pre>
 <pre class="MultiCode">
@@ -947,7 +947,7 @@ msgbox, the car is really old
 if (wheels="flat")
 {
 msgbox, this car is not safe to drive.
-return
+Return
 }
 else
 {
@@ -969,7 +969,7 @@ if (car="old")
    if (wheels="flat")
    {
       msgbox, this car is not safe to drive.
-      return
+      Return
    }
    else
    {
