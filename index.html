@@ -67,7 +67,7 @@
 			</div>
 			<div id="bodyContent">
 				<h3>1 - <a id="s0">The Basics</a>.</h3>
-				<p class="Style1">
+				<p class="Note">
 					Before we begin our journey, let me give some advice. 
 					Throughout this tutorial you will see a lot of text and a 
 					lot of code. For optimal learning power, it is advised 
@@ -104,7 +104,7 @@
 					</li>
 					<li>Once done, great! Continue on to section b.</li>
 				</ol>
-				<p class="Style1">Video instructions:<br />
+				<p class="Note">Video instructions:<br />
 					Frankie's "Install and Hello World"<br />
 					<a href="http://www.autohotkey.com/forum/viewtopic.php?t=77674" class="url">http://www.autohotkey.com/forum/viewtopic.php?t=77674</a>
 				</p>
@@ -163,7 +163,7 @@ Return
 					<li>10. Hip Hip Hooray! Your first script is done. Go get some reward snacks then return to reading the rest of this tutorial.</li>
 			   </ul>
 
-				<p class="Style1">
+				<p class="Note">
 					Video instructions:<br />
 					Frankie's "Install and Hello World"<br /><a href="http://www.autohotkey.com/forum/viewtopic.php?t=77674" class="url">http://www.autohotkey.com/forum/viewtopic.php?t=77674</a>
 
@@ -198,7 +198,7 @@ Return
 						<li>Look for <b>AutoHotkey.chm</b> or a file that says AutoHotkey and has a yellow question mark on it.</li>
 						<li>Done!</li>
 					</ol>
-               <p class="Style1">
+               <p class="Note">
 					Online Links:<br />
 					<a href="http://www.autohotkey.com/docs/" class="url">Documentation</a><br />
 					<a href="http://www.autohotkey.com/docs/commands.htm" class="url">Command List</a><br />
@@ -233,7 +233,7 @@ Return
 					<i>"So, how exactly does a person such as myself create a hotkey?"</i>
 					Good question. A hotkey is created by using a single pair of ::'s. The key or key combo needs to go on the <b>left</b> of the <span class="InlineCode">::</span>. And the content needs to go below, followed by a <span class="InlineCode">return</span>.<br />
 				</p>
-				<p class="Style1">Note: Their are exceptions, but those tend to cause confusion a lot of the time. So it won't be covered in the tutorial, at least, not right now.</p>
+				<p class="Note">Note: Their are exceptions, but those tend to cause confusion a lot of the time. So it won't be covered in the tutorial, at least, not right now.</p>
 <pre class="MultiCode">
 esc::
    MsgBox Escape!!!!
@@ -355,7 +355,7 @@ Numpad0 & Numpad2::Run Notepad                                            |
 :*:ftw::Free the whales
 </pre>
 
-				<p class="Style1">
+				<p class="Note">
 					For additional hotkey and hotstring modifiers, information and examples, visit:<br />
 					<a href="http://www.autohotkey.com/docs/Hotkeys.htm" class="url">Hotkeys</a><br />
 					<a href="http://www.autohotkey.com/docs/Hotstrings.htm" class="url">Hotstrings</a>
@@ -410,7 +410,7 @@ Return
 
 			   <p>When #IfWin commands are turned off (or never used in a 
                script), all hotkeys and hotstrings are enabled for all windows.</p>
-			   <p class="Style1">For more in-depth information and similar 
+			   <p class="Note">For more in-depth information and similar 
             commands, check out:<br />
                <a href="http://www.autohotkey.com/docs/commands/_IfWinActive.htm" class="url">#IfWinActive</a></p>
 			   <h2>c. <a id="s13">Multiple hotkeys/hotstrings per file</a></h2>
@@ -481,7 +481,7 @@ Return                                     ; This ends the hotkey. The code belo
 					<hr />
 				</div>
 				<p><i><strong>The next couple of paragraphs are talking about the <a href="http://www.autohotkey.com/docs/commands/Send.htm" class="url">table on send page</a>.</strong><br /></i></p>
-				<p class="Style1">
+				<p class="Note">
 					Note:<br />This table <b>does not</b> apply to <a href="http://www.autohotkey.com/docs/Hotkeys.htm" class="url">hotkeys</a>. Meaning, you do not wrap <span class="key">CTRL</span> or <span class="key">ENTER</span> (or any other key) inside {}'s when making a hotkey.
 				</p><br />
 
@@ -571,7 +571,7 @@ Apples are a fruit.
 
 	   </div>
 
-		<p class="Style1">
+		<p class="Note">
 			Note: Their are several different forms of send. Each has there own special features. If one form of send does not work for your needs, try another type of send. Simply replace the commands name "send" with "sendPlay" or whatever you want.<br />
 			Here are most ways to send text:<br />
 			Send<br />
@@ -659,7 +659,7 @@ Run, %A_MyDocuments%
 Run, http://www.autohotkey.com
 Run, http://www.google.com
 </pre><br />
-      <p class="Style1">For more in-depth information and examples, check out:<br /><a href="http://www.autohotkey.com/docs/commands/Run.htm" class="url">http://www.autohotkey.com/docs/commands/Run.htm</a>.</p>
+      <p class="Note">For more in-depth information and examples, check out:<br /><a href="http://www.autohotkey.com/docs/commands/Run.htm" class="url">http://www.autohotkey.com/docs/commands/Run.htm</a>.</p>
    </div>
 
 
@@ -673,7 +673,7 @@ Run, http://www.google.com
    <div>
       AutoHotkey has two main types of things used by the scripter to create code:<br />
       Commands and Functions()<br />
-      <p class="Style1">Helpful links:<br />
+      <p class="Note">Helpful links:<br />
       A list of all commands: <a href="http://www.autohotkey.com/docs/commands.htm" class="url">commands.htm</a><br />
       A list of all built-in functions: <a href="http://www.autohotkey.com/docs/Functions.htm#BuiltIn" class="url">Functions.htm#BuiltIn</a></p>
    </div>
@@ -696,7 +696,7 @@ Run, Notepad.exe
 
       Commands also differ from function in that they use "traditional syntax". Meaning: when you use a <span class="InlineCode">variable</span>, you NEED to use %'s around it. <span class="InlineCode">%variable%</span>. Any text and numbers do not need to be in "quotation marks". <span class="InlineCode">This is some text</span>. Additionally, you cannot do math in the parameters, unlike functions().
    </div>
-   <p class="Style1">
+   <p class="Note">
       You can do math in parameters if you force an expression with a single <span class="InlineCode">%</span>, but that will not be covered.
    </p>
 
@@ -724,7 +724,7 @@ Run, Notepad.exe
 <pre class="MultiCode">
 <span style="color:#ff4400"><b>MyVariable</b></span>:=SubStr("I'm scripting, awesome!", 16)
 </pre>
-      <p class="Style1">This isn't the only way, but it's the most common. You are assigning <span class="InlineCode">MyVariable</span> to the value of the function (in this case, <span class="InlineCode">SubStr(...)</span>) that is to the right of the :=.<br />
+      <p class="Note">This isn't the only way, but it's the most common. You are assigning <span class="InlineCode">MyVariable</span> to the value of the function (in this case, <span class="InlineCode">SubStr(...)</span>) that is to the right of the :=.<br />
       <a href="http://www.autohotkey.com/docs/Functions.htm" class="url">More about Functions</a></p>
    </div>
    <div>
@@ -812,7 +812,7 @@ MsgBox, We are now 'outside' the if. We did not need {}'s since there was only 1
    </div>
    <hr />
 
-   <p class="Style1">
+   <p class="Note">
       Any equal sign (<b>=</b>) with a symbol infront of it is called an <b>Assignment Operator</b>, which are always an expression. So <span class="InlineCode">:=</span> <span class="InlineCode">+=</span> <span class="InlineCode">-=</span> <span class="InlineCode">.=</span> etc. always use expressions.
    </p>
 
@@ -915,7 +915,7 @@ If Var1 &lt; %Var2%                   ; Without parenthesis, the if is Tradition
    What if you wanted to use ExludeTitle but not fill in WinText or WinTitle? Simple!<br />
    <span class="InlineCode">ControlGetText, OutputVar, Control,,, ExcludeTitle</span><br /><br />
 
-   <p class="Style1">Please note that you cannot IGNORE parameters, you can however leave them blank.<br />
+   <p class="Note">Please note that you cannot IGNORE parameters, you can however leave them blank.<br />
    If you were to Ignore "WinTitle, WinText", it would look like this and cause issues:<br />
    <span class="InlineCode">ControlGetText, OutputVar, Control, ExcludeTitle</span><br />
    This is valid.<br />
@@ -946,7 +946,7 @@ MsgBox, %A_AHKVersion%
    This is how a lot of "pros" have learned. But don't be affraid to ask for help, we don't bite (hard).
    Learning takes time, the "pros" you encounter did not learn to be masters in just a few hours or days.
    </p>
-   <p class="Style1">"If at first you don't succeed, try, try, try again." - Hickson, William E.</p>
+   <p class="Note">"If at first you don't succeed, try, try, try again." - Hickson, William E.</p>
 
 
    <h2>d. <a id="s64">Indentation</a></h2>
