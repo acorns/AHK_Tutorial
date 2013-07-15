@@ -1,16 +1,8 @@
-
 #toc
 {
-   border:              black;
-   border-top-style:    solid;
-   border-bottom-style: solid;
-   border-left-style:   double;
-   border-right-style:  double;
-   border-top-width:    2px;
-   border-bottom-width: 2px;
-   border-left-width:   4px;
-   border-right-width:  4px;
-   width:               350px;
+   border: 1px solid #bbb;
+   padding:.2em;
+   width: 350px;
 }
 
 
@@ -49,6 +41,7 @@ pre
    margin-left:      auto;
    margin-right:     auto;
    background-color: #efefef;
+   padding: .5em;
 }
 
 body
@@ -126,15 +119,15 @@ h1:hover,h3:hover
    
 }
 
-.Style1
+.Note
 {
    background-color:  #CAFFD5;
-   padding-left:      6px;
+   padding-left:      12px;
    padding-right:     3px;
    border-left:       #33A64D;
    border-left-style: solid;
    border-left-width: 2px;
-   width:             530px;
+   max-width:         550px;
    margin-left:       1em;
 }
 
