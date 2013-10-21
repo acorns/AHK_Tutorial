@@ -27,8 +27,8 @@ h1, h2, h3, p
    margin:  2px;
    padding: 5px;
    padding-right: 2px;
+   
 }
-
 pre
 {
    margin-top:    0.5em;
@@ -53,31 +53,34 @@ body
 }
 
 
-h1
+h1, h1 a
 {
    background-color: #68758f;
    font-size:        22pt;
    color:            white;
    height:           32px;
    margin-top:       2em;
+   text-decoration:  none;
 }
 
 
-h2
+h2, h2 a
 {
    background-color: #7d89a2;
    font-size:        12pt;
    color:            white;
    margin-top:       1em;
+   text-decoration:  none;
 }
 
 /* same as h1 but no top margin. */
-h3
+h3, h3 a
 {
    background-color: #68758f;
    font-size:        22px;
    color:            white;
    height:           32px;
+   text-decoration:  none;
 }
 
 h1:hover,h3:hover
