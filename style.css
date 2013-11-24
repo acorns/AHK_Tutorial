@@ -1,8 +1,7 @@
 #toc
 {
-   border: 1px solid #bbb;
    padding:.2em;
-   width: 350px;
+   font-size: 11pt;
 }
 
 
@@ -14,6 +13,11 @@ a.toci:hover,li.toci:hover,a.url:hover
 p
 {
    line-height: 1.35em;
+}
+
+#toc > ol > li > ol > li
+{
+	list-style-type: lower-alpha;
 }
 
 ol, ul
@@ -40,15 +44,14 @@ pre
    width:            960px;
    margin-left:      auto;
    margin-right:     auto;
-   background-color: #efefef;
+   background-color: #fff;
    padding: .5em;
+   box-shadow: 0px 4px 5px 5px #ddd;
 }
 
 body
 {
-   background-color: White;
-   color:            black;
-   font-size:        100%;
+   background-color: #efefef;
    font-family:      Verdana, Arial, Helvetica, sans-serif, "MS sans serif";
 }
 
@@ -97,7 +100,7 @@ h1:hover,h3:hover
    color:               #327906;
    font-weight:         500;
    font-family:         "Andale Mono", "Courier New", Courier, monospace;
-   background-color:    #dddddd;
+   background-color:    #efefef;
    padding-left:        3px;
    padding-right:       3px;
    border-top:          #c4c4c4;
