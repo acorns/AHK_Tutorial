@@ -15,6 +15,11 @@ p
    line-height: 1.35em;
 }
 
+#toc > ol > li > ol > li
+{
+	list-style-type: lower-alpha;
+}
+
 ol, ul
 {
    margin-top:    5px;
